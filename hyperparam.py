@@ -19,7 +19,7 @@ dim_learning_rate = skopt.space.Real(
 )
 dim_num_lstm_layers = skopt.space.Integer(low=1, high=5, name="num_lstm_layers")
 dim_num_lstm_nodes = skopt.space.Integer(low=5, high=512, name="num_lstm_nodes")
-dim_dropout = skopt.space.Real(low=0.0, high=0.3, prior="uniform", name="dropout")
+dim_dropout = skopt.space.Real(low=0.0, high=0.5, prior="uniform", name="dropout")
 dim_batch_size = skopt.space.Categorical(
     categories=[8, 16, 32, 64, 128], name="batch_size"
 )
