@@ -6,21 +6,12 @@ from functions import *
 from import_data import data_scaled, data_scalers
 import skopt
 
-# current best:
-# Search results:
-# Learning rate: 2.5095534247216324e-05
-# Number of lstm layers: 4
-# Number of lstm units per layer: 473
-# Best dropout value: 0.5877802924577188
 
-# Fitness value: 0.02556636929512024
-
-
-WINDOW = 50
+WINDOW = 7
 HORIZON = 1
 SPLIT = 0.8
 EPOCHS = 20
-OPTIMIZATION_ITERATIONS = 400
+OPTIMIZATION_ITERATIONS = 200
 
 # define the hyperparameters that are searched
 dim_learning_rate = skopt.space.Real(
